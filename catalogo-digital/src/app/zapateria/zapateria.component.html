@@ -1,7 +1,28 @@
-<p>
-  zapateria works! v {{zapateria.id}}
-</p>
 <div *ngIf="zapateria">
-	{{zapateria.url}}
-	{{productos}}
+  <div class="album py-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center back-album" [ngClass]="zapateria.url">
+          <img src="/assets/images/logos/{{zapateria.url}}.png" class="img-fluid" alt="{{zapateria.url}}">
+        </div>
+
+        <div class="col-md-4" *ngFor="let shoe of productos.lista">
+          <a routerLink="/producto/{{zapateria.url}}/{{shoe.id}}">
+            <div class="card mb-4 box-shadow bg-light">
+              <img class="card-img-top" data-src="{{shoe.album}}/1.jpg" alt="{{shoe.modelo}}">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <small class="text-muted">{{shoe.price | currency}} *</small>
+                  </div>
+                  <small class="text-muted">{{shoe.modelo}}</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

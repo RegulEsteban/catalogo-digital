@@ -1,5 +1,5 @@
 export class Zapato {
-	id: number;
+	  id: number;
     color: string;
     modelo: string;
     album: string;

@@ -10,13 +10,15 @@ import { ZapateriaComponent } from './zapateria/zapateria.component';
 import { TiendaComponent } from './tienda/tienda.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductoresComponent,
     ZapateriaComponent,
-    TiendaComponent
+    TiendaComponent,
+    DetalleProductoComponent
   ],
   imports: [
     BrowserModule,

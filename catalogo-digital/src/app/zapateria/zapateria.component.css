@@ -1,0 +1,31 @@
+.back-album{
+  position: relative;
+}
+
+.back-album:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.03;
+  background-attachment: fixed;
+  background-size: 300px 190px;
+  background-repeat: space;
+  background-position: 50% 50%;
+}
+
+.gian-carlo:before{
+  background-image: url("/assets/images/logos/gian-carlo.png");
+}
+.dolancy:before{
+  background-image: url("/assets/images/logos/dolancy.png");
+}
+
+.back-album img{
+  max-width: 800px;
+  max-height: 200px;
+}

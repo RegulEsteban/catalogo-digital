@@ -14,7 +14,7 @@ import { ZapateriaService } from '../zapateria.service';
 export class ZapateriaComponent implements OnInit {
 	zapateria: Zapateria;
 	productos: Productos;
-
+  backUrl: String;
   constructor(
   	private route: ActivatedRoute,
   	private zapateriaService: ZapateriaService,
@@ -29,6 +29,7 @@ export class ZapateriaComponent implements OnInit {
   getProductosByZapateria(): void{
   	const url = this.route.snapshot.paramMap.get('url');
   	this.zapateriaService.getProductosByZapateria(url).subscribe(productos => this.productos = productos);
+  	this.backUrl = "/assets/images/logos/"+url+".png";
   }
 
   getZapateria(): void{

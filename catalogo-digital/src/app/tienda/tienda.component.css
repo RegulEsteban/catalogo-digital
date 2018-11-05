@@ -1,0 +1,15 @@
+.hm-zoom img,.overlay img{
+  -webkit-transition:all .2s linear;transition:all .2s linear
+}
+.hm-zoom:hover .mask,.overlay:hover .mask{
+  opacity:1
+}
+.hm-zoom:hover img{
+  -webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)
+}
+.hm-gradient {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+  color: #2E2E2E;
+}

@@ -1,0 +1,125 @@
+<div *ngIf="shoe">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 order-md-2 pt-5">
+        <h2 class="featurette-heading"><span class="text-muted">Modelo:</span> {{ shoe.modelo | uppercase }}</h2>
+        <hr>
+        <h4>{{shoe.price | currency}} *</h4>
+        <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
+        <table class="table">
+          <tbody>
+          <tr class="text-center">
+            <td>
+              <img src="/assets/images/iconos/piel.png" width="30" height="30" class="d-inline-block align-top" alt="piel"><br>
+              {{shoe.properties.piel}}
+            </td>
+            <td>
+              <img src="/assets/images/iconos/corte.png" width="30" height="30" class="d-inline-block align-top" alt="corte"><br>
+              {{shoe.properties.forro}}
+            </td>
+            <td>
+              <img src="/assets/images/iconos/suela.png" width="30" height="30" class="d-inline-block align-top" alt="suela"><br>
+              {{shoe.properties.suela}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>Tallas <small class="text-muted text-right">MX</small></h4>
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+          </tbody>
+        </table>
+        <hr>
+        <div class="container text-right">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="https://www.facebook.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 order-md-1">
+        <div id="carouselShoes" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div *ngFor="let view of shoe.detail; let idx = index" class="{{idx == 0 ? 'carousel-item active' : 'carousel-item'}}">
+              <img class="d-block w-100" src="{{shoe.album}}/{{view}}" alt="{{shoe.modelo}}">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselShoes" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-2x fa-dark" aria-hidden="true"></i>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselShoes" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-2x fa-dark" aria-hidden="true"></i>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-12 order-md-3 text-center">
+        <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
+        <hr>
+        <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        <h4>{{shoe.price | currency}} *</h4>
+        <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row px-2">
+    <div class="col-md-12">
+      <img class="card-img" src="{{shoe.album}}/horizontal.jpg" alt="Card image">
+    </div>
+    <div class="col-md-6">
+      <img class="card-img" src="{{shoe.album}}/cuadro1.jpg" alt="Card image">
+    </div>
+    <div class="col-md-6">
+      <img class="card-img" src="{{shoe.album}}/cuadro2.jpg" alt="Card image">
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid my-0 py-1 bg-dark text-light">
+  <div class="container">
+    <h1 class="display-4 text-custom-desc">#HechosConAmor</h1>
+    <p class="lead text-right">Todos necesitamos un nuevo estilo.</p>
+  </div>
+</div>
