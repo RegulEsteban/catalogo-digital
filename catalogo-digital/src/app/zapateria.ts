@@ -13,5 +13,4 @@ export class Zapateria{
 	responsable: string;
 	email: string;
 	store: string;
-	logo: string;
 }

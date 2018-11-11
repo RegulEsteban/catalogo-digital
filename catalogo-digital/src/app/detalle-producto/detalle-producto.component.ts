@@ -18,6 +18,7 @@ export class DetalleProductoComponent implements OnInit {
 
   ngOnInit() {
     this.getShoe();
+    window.scrollTo(0, 0);
   }
 
   getShoe(): void{

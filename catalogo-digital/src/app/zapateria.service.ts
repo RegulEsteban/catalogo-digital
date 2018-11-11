@@ -17,7 +17,7 @@ export class ZapateriaService {
   constructor() {}
 
   getZapaterias(): Observable<Zapateria[]> {
-  	return of(ZAPATERIAS);
+  	return of(this.shuffleZapateria(ZAPATERIAS));
   }
 
   getProductosByZapateria(url: string): Observable<Productos>{
@@ -35,17 +35,38 @@ export class ZapateriaService {
   getAllProductos(): Zapato[] {
     let list: Zapato[] = [];
     PRODUCTOS.forEach(element => {
-      list.push(this.shuffleInPlace(element.lista).pop());
+      /*
+      let zapTmp = this.shuffleInPlace(element.lista).pop();
+      zapTmp['marca'] = element.url;
+      list.push(zapTmp);
+      */
+      this.shuffleInPlace(element.lista).forEach(zapato => {
+        zapato['marca'] = element.url;
+        list.push(zapato);
+      });
     });
-    return list;
+    return this.shuffleInPlace(list);
   }
 
   shuffleInPlace<Zapato>(array: Zapato[]): Zapato[] {
     if (array.length <= 1) return array;
 
     for(let i : number = array.length - 1; i >= 0; i--){
-      var randomItem: number = Math.floor(Math.random() * (i + 1));
-      var itemAtIndex: Zapato = array[randomItem];
+      let randomItem: number = Math.floor(Math.random() * (i + 1));
+      let itemAtIndex: Zapato = array[randomItem];
+
+      array[randomItem] = array[i];
+      array[i] = itemAtIndex;
+    }
+    return array;
+  }
+
+  shuffleZapateria<Zapateria>(array: Zapateria[]): Zapateria[] {
+    if (array.length <= 1) return array;
+
+    for(let i : number = array.length - 1; i >= 0; i--){
+      let randomItem: number = Math.floor(Math.random() * (i + 1));
+      let itemAtIndex: Zapateria = array[randomItem];
 
       array[randomItem] = array[i];
       array[i] = itemAtIndex;

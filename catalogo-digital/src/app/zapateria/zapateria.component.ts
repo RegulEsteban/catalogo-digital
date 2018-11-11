@@ -24,6 +24,7 @@ export class ZapateriaComponent implements OnInit {
   ngOnInit(): void {
   	this.getProductosByZapateria();
   	this.getZapateria();
+    window.scrollTo(0, 0);
   }
 
   getProductosByZapateria(): void{

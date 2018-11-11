@@ -17,6 +17,7 @@ export class TiendaComponent implements OnInit {
   ngOnInit() {
     this.getProductores();
     this.getAllProductos();
+    window.scrollTo(0, 0);
   }
 
   getProductores(): void{

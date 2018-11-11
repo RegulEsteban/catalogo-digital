@@ -11,18 +11,30 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.03;
+  opacity: 0.07;
   background-attachment: fixed;
   background-size: 300px 190px;
   background-repeat: space;
   background-position: 50% 50%;
 }
 
+.charlie:before{
+  background-image: url("/assets/images/logos/charlie.png");
+}
 .gian-carlo:before{
   background-image: url("/assets/images/logos/gian-carlo.png");
 }
 .dolancy:before{
   background-image: url("/assets/images/logos/dolancy.png");
+}
+.hnos-perez:before{
+  background-image: url("/assets/images/logos/hnos-perez.png");
+}
+.jimmy:before{
+  background-image: url("/assets/images/logos/jimmy.png");
+}
+.romers:before{
+  background-image: url("/assets/images/logos/romers.png");
 }
 
 .back-album img{

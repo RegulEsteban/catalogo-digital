@@ -45,112 +45,38 @@
           <hr>
           <h1 class="text-center mb-3">Titulo</h1>
         </div>
-        <div class="col-md-4" *ngFor="let zapatoItem of productos">
+        <div class="col-md-4" *ngFor="let zapatoItem of productos | paginate: { itemsPerPage: 6, currentPage: p }">
           <div class="card mb-4 box-shadow">
-            <a href="#">
+            <a href="producto/{{zapatoItem.marca}}/{{zapatoItem.id}}">
               <img class="card-img-top" data-src="{{zapatoItem.album}}/1.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
-              <p class="card-text">Modelo: {{zapatoItem.modelo}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                </div>
-                <small class="text-muted">$000.00</small>
+              <div class="d-flex justify-content-end">
+                <a class="badge badge-light" href="#"> #caballero </a>
+                <a class="badge badge-light" href="#"> #niños </a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <a href="#">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p class="card-text">Modelo: #000</p>
+              <p class="card-text">Mod: {{zapatoItem.modelo}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                  <a href="zapateria/{{zapatoItem.marca}}" class="btn btn-sm btn-outline-secondary">Ver zapatería</a>
                 </div>
-                <small class="text-muted">$000.00</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <a href="#">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p class="card-text">Modelo: #000</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                </div>
-                <small class="text-muted">$000.00</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <a href="#">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p class="card-text">Modelo: #000</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                </div>
-                <small class="text-muted">$000.00</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <a href="#">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p class="card-text">Modelo: #000</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                </div>
-                <small class="text-muted">$000.00</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <a href="#">
-              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            </a>
-            <div class="card-body">
-              <p class="card-text">Modelo: #000</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Marca</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                </div>
-                <small class="text-muted">$000.00</small>
+                <small class="text-muted">{{zapatoItem.price | currency}}</small>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <pagination-controls
+            (pageChange)="p = $event"
+            previousLabel="Anterior"
+            nextLabel="Siguiente"
+            class="pagination"
+          >
+
+          </pagination-controls>
+          <!--
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center align-items-center">
               <li class="page-item">
@@ -170,8 +96,10 @@
               </li>
             </ul>
           </nav>
+          -->
         </div>
       </div>
+
       <div class="row">
         <div class="col-md-12">
           <hr>
