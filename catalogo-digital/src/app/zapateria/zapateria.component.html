@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 d-flex justify-content-center back-album" [ngClass]="zapateria.url">
-          <img src="/assets/images/logos/{{zapateria.url}}.png" class="img-fluid" alt="{{zapateria.url}}">
+          <img data-src="{{globals.bucket}}/assets/images/logos/{{zapateria.url}}.png" class="img-fluid" alt="{{zapateria.url}}">
         </div>
 
         <div class="col-md-4" *ngFor="let shoe of productos.lista">
           <a routerLink="/producto/{{zapateria.url}}/{{shoe.id}}">
             <div class="card mb-4 box-shadow bg-light">
-              <img class="card-img-top" data-src="{{shoe.album}}/1.jpg" alt="{{shoe.modelo}}">
+              <img class="card-img-top" data-src="{{globals.bucket+shoe.album}}/1.jpg" alt="{{shoe.modelo}}">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">

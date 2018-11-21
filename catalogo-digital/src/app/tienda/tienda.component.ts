@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ZapateriaService} from '../zapateria.service';
 import {Zapateria} from '../zapateria';
 import {Zapato} from '../zapato';
+import {Globals} from '../globals';
 
 @Component({
   selector: 'app-tienda',
@@ -13,7 +14,7 @@ export class TiendaComponent implements OnInit {
   productos: Zapato[];
   p: 1;
 
-  constructor(private zapateriaService: ZapateriaService) { }
+  constructor(private zapateriaService: ZapateriaService, public globals: Globals) { }
 
   ngOnInit() {
     this.getProductores();

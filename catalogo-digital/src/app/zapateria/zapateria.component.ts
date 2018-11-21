@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { Zapateria } from '../zapateria';
 import { Productos } from '../productos';
 import { ZapateriaService } from '../zapateria.service';
+import {Globals} from '../globals';
 
 @Component({
   selector: 'app-zapateria',
@@ -18,7 +19,8 @@ export class ZapateriaComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
   	private zapateriaService: ZapateriaService,
-    private location: Location
+    private location: Location,
+    public globals: Globals
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +32,7 @@ export class ZapateriaComponent implements OnInit {
   getProductosByZapateria(): void{
   	const url = this.route.snapshot.paramMap.get('url');
   	this.zapateriaService.getProductosByZapateria(url).subscribe(productos => this.productos = productos);
-  	this.backUrl = "/assets/images/logos/"+url+".png";
+  	this.backUrl = this.globals.bucket+"/assets/images/logos/"+url+".png";
   }
 
   getZapateria(): void{

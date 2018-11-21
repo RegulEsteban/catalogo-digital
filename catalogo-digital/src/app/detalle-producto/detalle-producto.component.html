@@ -51,7 +51,7 @@
         <div id="carouselShoes" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div *ngFor="let view of shoe.detail; let idx = index" class="{{idx == 0 ? 'carousel-item active' : 'carousel-item'}}">
-              <img class="d-block w-100" src="{{shoe.album}}/{{view}}" alt="{{shoe.modelo}}">
+              <img class="d-block w-100" data-src="{{globals.bucket+shoe.album}}/{{view}}" alt="{{shoe.modelo}}">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselShoes" role="button" data-slide="prev">
@@ -106,13 +106,13 @@
 <div class="container-fluid">
   <div class="row px-2">
     <div class="col-md-12">
-      <img class="card-img" src="{{shoe.album}}/horizontal.jpg" alt="Card image">
+      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/horizontal.jpg" alt="Card image">
     </div>
     <div class="col-md-6">
-      <img class="card-img" src="{{shoe.album}}/cuadro1.jpg" alt="Card image">
+      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro1.jpg" alt="Card image">
     </div>
     <div class="col-md-6">
-      <img class="card-img" src="{{shoe.album}}/cuadro2.jpg" alt="Card image">
+      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro2.jpg" alt="Card image">
     </div>
   </div>
 </div>

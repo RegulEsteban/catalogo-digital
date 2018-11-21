@@ -12,6 +12,7 @@ import { TiendaComponent } from './tienda/tienda.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
+import {Globals} from './globals';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
     AppRoutingModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [ Globals ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

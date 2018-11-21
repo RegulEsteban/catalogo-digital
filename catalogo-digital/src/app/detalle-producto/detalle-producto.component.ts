@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Zapato} from '../zapato';
 import {ActivatedRoute} from '@angular/router';
 import {ZapateriaService} from '../zapateria.service';
+import {Globals} from '../globals';
 
 @Component({
   selector: 'app-detalle-producto',
@@ -13,7 +14,8 @@ export class DetalleProductoComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private zapateriaService: ZapateriaService
+    private zapateriaService: ZapateriaService,
+    public globals: Globals
   ) { }
 
   ngOnInit() {

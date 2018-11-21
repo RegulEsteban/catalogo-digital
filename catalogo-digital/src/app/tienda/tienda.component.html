@@ -4,7 +4,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item" *ngFor="let productor of zapaterias; first as isFirst" [class.active]="isFirst">
-      <img class="d-block w-100" data-src="/assets/images/imagenes-carrusel/carrusel-{{productor.url}}.jpg" alt="Second slide">
+      <img class="d-block w-100" data-src="{{globals.bucket}}/assets/images/imagenes-carrusel/carrusel-{{productor.url}}.jpg" alt="Second slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -26,19 +26,19 @@
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
             <h2 class="card-header text-center">Dama</h2>
-            <img class="card-img-top" src="/assets/images/imagenes-categorias/cuadro-mujer.jpg" alt="Categoría Mujer">
+            <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-mujer.jpg" alt="Categoría Mujer">
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
             <h2 class="card-header text-center">Caballero</h2>
-            <img class="card-img-top" src="/assets/images/imagenes-categorias/cuadro-hombre.jpg" alt="Categoría Hombre">
+            <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-hombre.jpg" alt="Categoría Hombre">
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
             <h2 class="card-header text-center">Niñ@s</h2>
-            <img class="card-img-top" src="/assets/images/imagenes-categorias/cuadro-ninos.jpg" alt="Categoría Niños">
+            <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-ninos.jpg" alt="Categoría Niños">
           </div>
         </div>
         <div class="col-md-12">
@@ -48,7 +48,7 @@
         <div class="col-md-4" *ngFor="let zapatoItem of productos | paginate: { itemsPerPage: 6, currentPage: p }">
           <div class="card mb-4 box-shadow">
             <a href="producto/{{zapatoItem.marca}}/{{zapatoItem.id}}">
-              <img class="card-img-top" data-src="{{zapatoItem.album}}/1.jpg" alt="Card image cap">
+              <img class="card-img-top" data-src="{{globals.bucket+zapatoItem.album}}/1.jpg" alt="Card image cap">
             </a>
             <div class="card-body">
               <div class="d-flex justify-content-end">
@@ -108,7 +108,7 @@
         <div class="col-md-4" *ngFor="let productor of zapaterias; first as isFirst">
           <a href="/zapateria/{{productor.url}}">
           <div class="view overlay hm-zoom">
-            <img src="/assets/images/logos/{{productor.url}}.png" class="img-fluid " alt="{{productor.url}}">
+            <img data-src="{{globals.bucket}}/assets/images/logos/{{productor.url}}.png" class="img-fluid " alt="{{productor.url}}">
           </div>
           </a>
         </div>
