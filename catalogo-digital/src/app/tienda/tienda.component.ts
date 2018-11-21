@@ -11,6 +11,7 @@ import {Zapato} from '../zapato';
 export class TiendaComponent implements OnInit {
   zapaterias: Zapateria[];
   productos: Zapato[];
+  p: 1;
 
   constructor(private zapateriaService: ZapateriaService) { }
 
