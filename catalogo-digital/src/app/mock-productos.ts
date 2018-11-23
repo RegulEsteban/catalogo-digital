@@ -5,19 +5,20 @@ export const PRODUCTOS: Productos[] = [
     url: 'charlie',
     lista: [{
       id: 1,
-      color: 'Mr. Nice',
+      colores: ['Negro','Café'],
       modelo: '040 Negro',
       album: '/assets/images/galerias/galeria-charlie/08negro',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo. xxx',
       price: 455.00,
+      categorias: ['damas'],
       properties: {
         piel: 'Ternera',
         forro: 'Flor de cerdo',
         suela: '100% cuero',
-        tallas: '25 al 29'
+        tallas: ['25', '25.5', '26']
       }
-    },{
+    }/*,{
       id: 2,
       color: 'Miel',
       modelo: '097 Miel',
@@ -905,6 +906,6 @@ export const PRODUCTOS: Productos[] = [
         suela: '100% cuero',
         tallas: '25 al 29'
       }
-    }]
+    }*/]
   }
 ];

@@ -52,13 +52,12 @@
             </a>
             <div class="card-body">
               <div class="d-flex justify-content-end">
-                <a class="badge badge-light" href="#"> #caballero </a>
-                <a class="badge badge-light" href="#"> #niños </a>
+                <a class="badge badge-light" *ngFor="let categoria of zapatoItem.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
               </div>
               <p class="card-text">Mod: {{zapatoItem.modelo}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="zapateria/{{zapatoItem.marca}}" class="btn btn-sm btn-outline-secondary">Ver zapatería</a>
+                  <a href="zapateria/{{zapatoItem.marca}}" class="btn btn-sm btn-outline-secondary">Ir a la zapatería</a>
                 </div>
                 <small class="text-muted">{{zapatoItem.price | currency}}</small>
               </div>

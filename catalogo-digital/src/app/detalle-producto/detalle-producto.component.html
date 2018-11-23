@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-5 order-md-2 pt-5">
         <h2 class="featurette-heading"><span class="text-muted">Modelo:</span> {{ shoe.modelo | uppercase }}</h2>
+        <a class="badge badge-light" *ngFor="let categoria of shoe.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
         <hr>
         <h4>{{shoe.price | currency}} *</h4>
         <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
@@ -28,13 +29,16 @@
         <table class="table table-bordered">
           <tbody>
           <tr>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
+            <td *ngFor="let size of shoe.properties.tallas">{{size}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h4>Colores</h4>
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <td *ngFor="let color of shoe.colores">{{color}}</td>
           </tr>
           </tbody>
         </table>
@@ -67,37 +71,24 @@
       <div class="col-md-12 order-md-3 text-center">
         <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
         <hr>
+      </div>
+      <div class="col-md-6 order-md-4 text-center">
         <table class="table">
           <thead class="thead-light">
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Talla</th>
+            <th scope="col">Largo</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
+          <tr *ngFor="let talla of shoe.properties.tallas">
+            <th scope="row">{{talla}}</th>
+            <td>{{talla}} cm</td>
           </tr>
           </tbody>
         </table>
-        <h4>{{shoe.price | currency}} *</h4>
+      </div>
+      <div class="col-md-6 order-md-5 text-center">
         <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
       </div>
     </div>
@@ -114,12 +105,5 @@
     <div class="col-md-6">
       <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro2.jpg" alt="Card image">
     </div>
-  </div>
-</div>
-
-<div class="jumbotron jumbotron-fluid my-0 py-1 bg-dark text-light">
-  <div class="container">
-    <h1 class="display-4 text-custom-desc">#HechosConAmor</h1>
-    <p class="lead text-right">Todos necesitamos un nuevo estilo.</p>
   </div>
 </div>
