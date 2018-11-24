@@ -13,6 +13,7 @@ import { TiendaComponent } from './tienda/tienda.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import {Globals} from './globals';
+import { UbicacionComponent } from './ubicacion/ubicacion.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {Globals} from './globals';
     ProductoresComponent,
     ZapateriaComponent,
     TiendaComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    UbicacionComponent
   ],
   imports: [
     BrowserModule,

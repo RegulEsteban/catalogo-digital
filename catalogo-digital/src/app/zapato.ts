@@ -11,6 +11,7 @@ export class Zapato {
         piel: string,
         forro: string,
         suela: string,
+        plantilla: string,
         tallas: string[],
     };
 }

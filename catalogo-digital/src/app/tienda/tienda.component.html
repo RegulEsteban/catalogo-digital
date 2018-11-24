@@ -25,25 +25,31 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
-            <h2 class="card-header text-center">Dama</h2>
+            <a href="/categoria/damas" class="card-link">
+            <h2 class="card-header text-center">Damas</h2>
             <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-mujer.jpg" alt="Categoría Mujer">
+            </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
-            <h2 class="card-header text-center">Caballero</h2>
+            <a href="/categoria/caballeros" class="card-link">
+            <h2 class="card-header text-center">Caballeros</h2>
             <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-hombre.jpg" alt="Categoría Hombre">
+            </a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
+            <a href="/categoria/ninos" class="card-link">
             <h2 class="card-header text-center">Niñ@s</h2>
             <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-ninos.jpg" alt="Categoría Niños">
+            </a>
           </div>
         </div>
         <div class="col-md-12">
           <hr>
-          <h1 class="text-center mb-3">Titulo</h1>
+          <h2 class="text-center font-italic mb-3">#EligeTuEstilo</h2>
         </div>
         <div class="col-md-4" *ngFor="let zapatoItem of productos | paginate: { itemsPerPage: 6, currentPage: p }">
           <div class="card mb-4 box-shadow">
@@ -102,9 +108,9 @@
       <div class="row">
         <div class="col-md-12">
           <hr>
-          <h1 class="text-center mb-3">Zapateros</h1>
+          <h2 class="text-center font-italic mb-3">#ZapateroATusZapatos</h2>
         </div>
-        <div class="col-md-4" *ngFor="let productor of zapaterias; first as isFirst">
+        <div class="col-md-4 py-3" *ngFor="let productor of zapaterias; first as isFirst">
           <a href="/zapateria/{{productor.url}}">
           <div class="view overlay hm-zoom">
             <img data-src="{{globals.bucket}}/assets/images/logos/{{productor.url}}.png" class="img-fluid " alt="{{productor.url}}">
