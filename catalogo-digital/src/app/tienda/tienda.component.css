@@ -23,3 +23,6 @@
 .card-link{
   color: #444444;
 }
+.card, .card-header{
+  border: none;
+}
