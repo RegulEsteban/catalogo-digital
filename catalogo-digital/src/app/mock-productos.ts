@@ -5,7 +5,7 @@ export const PRODUCTOS: Productos[] = [
     url: 'charlie',
     lista: [{
       id: 1,
-      colores: ['Negro','Café'],
+      colores: ['Negro', 'Café'],
       modelo: 'Bota 08',
       album: '/assets/images/galerias/galeria-charlie/08negro',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
@@ -137,8 +137,7 @@ export const PRODUCTOS: Productos[] = [
       modelo: 'Bota 710',
       album: '/assets/images/galerias/galeria-charlie/710miel',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Botas ideales para aquellas mujeres que buscan comodidad y estilo.
-El tacón ancho y la plataforma brindan más soporte a la hora de caminar.',
+      description: 'Botas ideales para aquellas mujeres que buscan comodidad y estilo. El tacón ancho y la plataforma brindan más soporte a la hora de caminar.',
       price: 730.00,
       categorias: ['damas'],
       properties: {
@@ -154,8 +153,7 @@ El tacón ancho y la plataforma brindan más soporte a la hora de caminar.',
       modelo: '097 Negro',
       album: '/assets/images/galerias/galeria-charlie/710negro',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Si buscas elegancia y comodidad estas son las botas ideales para ti, perfectas para cualquier ocasión. El tacón ancho y la plataforma proporcionan gran soporte a la hora de caminar.
-Estás botas están confeccionadas con corte y forro de piel.',
+      description: 'Si buscas elegancia y comodidad estas son las botas ideales para ti, perfectas para cualquier ocasión. El tacón ancho y la plataforma proporcionan gran soporte a la hora de caminar. Estás botas están confeccionadas con corte y forro de piel.',
       price: 730.00,
       categorias: ['damas'],
       properties: {
@@ -551,8 +549,7 @@ Estás botas están confeccionadas con corte y forro de piel.',
       modelo: 'Loafer 014',
       album: '/assets/images/galerias/galeria-hnos-perez/014cafe',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Zapato de descanso con pespuntes decorado, ajuste en el empeine para caminar grandes distancias.
-Ideal para sentirse comida luciendo casual.',
+      description: 'Zapato de descanso con pespuntes decorado, ajuste en el empeine para caminar grandes distancias. Ideal para sentirse comida luciendo casual.',
       price: 450.00,
       categorias: ['damas'],
     properties: {
@@ -632,8 +629,7 @@ Ideal para sentirse comida luciendo casual.',
       modelo: 'Bota 709',
       album: '/assets/images/galerias/galeria-hnos-perez/709cafe',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Gana comodidad mientras disfrutas un ajuste perfecto gracias a esta bota de piel con elásticos laterales para que ponértelo sea sencillo y práctico.
-Ideal para la mujer trabajadora que requiere sentirse cómoda y segura todo el día.',
+      description: 'Gana comodidad mientras disfrutas un ajuste perfecto gracias a esta bota de piel con elásticos laterales para que ponértelo sea sencillo y práctico. Ideal para la mujer trabajadora que requiere sentirse cómoda y segura todo el día.',
       price: 570.00,
       categorias: ['damas'],
     properties: {
@@ -649,8 +645,7 @@ Ideal para la mujer trabajadora que requiere sentirse cómoda y segura todo el d
       modelo: 'Bota 712',
       album: '/assets/images/galerias/galeria-hnos-perez/712cafe',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Botas color negro, superficie lisa, correa ajustable con hebillas metálicas niqueladas.Tacón 2 cm. de alto. 
-Ideales para el campo o la ciudad, tus pies te lo agradecerán.',
+      description: 'Botas color negro, superficie lisa, correa ajustable con hebillas metálicas niqueladas.Tacón 2 cm. de alto. Ideales para el campo o la ciudad, tus pies te lo agradecerán.',
       price: 570.00,
       categorias: ['damas'],
     properties: {
@@ -880,7 +875,7 @@ Ideales para el campo o la ciudad, tus pies te lo agradecerán.',
       id: 1,
       colores: ['Negro','Tabaco'],
       modelo: 'Bota 050',
-      album: '/assets/images/galerias/galeria-romers/050negro',
+      album: '/assets/images/galerias/galeria-romers/050 Negro',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Esta bota lisa en suave piel de res te brinda comodidad al caminar y olvidarte de las bajas temperaturas gracias a su forro textil.',
       price: 1.00,

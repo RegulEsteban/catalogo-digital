@@ -1,7 +1,7 @@
 <div *ngIf="shoe">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-5 order-md-2 pt-5">
+      <div class="col-md-5 order-2 pt-5">
         <h2 class="featurette-heading"><span class="text-muted">Modelo:</span> {{ shoe.modelo | uppercase }}</h2>
         <a class="badge badge-light" *ngFor="let categoria of shoe.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
         <hr>
@@ -26,32 +26,36 @@
           </tbody>
         </table>
         <h4>Tallas <small class="text-muted text-right">MX</small></h4>
-        <table class="table table-bordered">
-          <tbody>
-          <tr>
-            <td *ngFor="let size of shoe.properties.tallas">{{size}}</td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <td *ngFor="let size of shoe.properties.tallas">{{size}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
         <hr>
         <h4>Colores</h4>
-        <table class="table table-bordered">
-          <tbody>
-          <tr>
-            <td *ngFor="let color of shoe.colores">{{color}}</td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <td *ngFor="let color of shoe.colores">{{color}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
         <hr>
         <div class="container text-right">
-          <div class="btn-group" role="group" aria-label="Basic example">
+          <div class="btn-group" role="group" aria-label="Redes Sociales">
             <a href="https://www.facebook.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
         </div>
 
       </div>
-      <div class="col-md-7 order-md-1">
+      <div class="col-md-7 order-1">
         <div id="carouselShoes" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div *ngFor="let view of shoe.detail; let idx = index" class="{{idx == 0 ? 'carousel-item active' : 'carousel-item'}}">
@@ -68,29 +72,6 @@
           </a>
         </div>
       </div>
-      <div class="col-md-12 order-md-3 text-center">
-        <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
-        <hr>
-      </div>
-      <div class="col-md-6 order-md-4 text-center">
-        <table class="table">
-          <thead class="thead-light">
-          <tr>
-            <th scope="col">Talla</th>
-            <th scope="col">Largo</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let talla of shoe.properties.tallas">
-            <th scope="row">{{talla}}</th>
-            <td>{{talla}} cm</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-md-6 order-md-5 text-center">
-        <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
-      </div>
     </div>
   </div>
 </div>
@@ -104,6 +85,30 @@
     </div>
     <div class="col-md-6">
       <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro2.jpg" alt="Card image">
+    </div>
+
+    <div class="col-md-12 order-md-3 text-center">
+      <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
+      <hr>
+    </div>
+    <div class="col-md-6 order-md-4 text-center">
+      <table class="table">
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">Talla</th>
+          <th scope="col">Largo</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let talla of shoe.properties.tallas">
+          <th scope="row">{{talla}}</th>
+          <td>{{talla}} cm</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6 order-md-5 text-center">
+      <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
     </div>
   </div>
 </div>

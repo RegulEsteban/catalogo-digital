@@ -1,0 +1,34 @@
+.mercado-table{
+  font-size: x-small;
+}
+.mercado-table td{
+  padding: .25rem;
+}
+.limit-width{
+  max-width: 25px;
+}
+.limit-height{
+  max-height: 25px;
+}
+.vertical-text span{
+  display: block;
+}
+.bg-calle{
+  background-color: #444444;
+  color: #e3eeff;
+}
+.bg-pasillo{
+  background-color: #cccccc;
+}
+.bg-locales{
+  background-color: #fd7e14;
+}
+.bg-wc{
+  background-color: #007bff;
+}
+.bg-cabina{
+  background-color: #20c997;
+}
+.lista-zapaterias{
+  font-size: small;;
+}

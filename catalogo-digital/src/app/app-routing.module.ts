@@ -5,12 +5,14 @@ import { TiendaComponent } from './tienda/tienda.component';
 import { ZapateriaComponent } from './zapateria/zapateria.component';
 import { CommonModule } from '@angular/common';
 import {DetalleProductoComponent} from './detalle-producto/detalle-producto.component';
+import {UbicacionComponent} from './ubicacion/ubicacion.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/tienda', pathMatch: 'full' },
 	{ path: 'tienda', component: TiendaComponent},
 	{ path: 'zapateria/:url', component: ZapateriaComponent},
-  { path: 'producto/:url/:id', component: DetalleProductoComponent}
+  { path: 'producto/:url/:id', component: DetalleProductoComponent},
+  { path: 'ubicacion', component: UbicacionComponent}
 ];
 
 @NgModule({

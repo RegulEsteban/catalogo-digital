@@ -13,7 +13,7 @@ export const ZAPATERIAS: Zapateria[] = [
     direccion:[
       'Av. 5 de mayo #409, San Miguel, C.P. 52104, San Mateo Atenco, Edo. de México'
     ],
-    facebook: 'dolancy',
+    facebook: null,
     instagram: '@dolancy',
     responsable: 'Esteban Regules',
     email: 'zapateria.dolancy@gmail.com',
