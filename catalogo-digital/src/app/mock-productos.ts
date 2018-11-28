@@ -402,7 +402,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/202negro',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Tu niña lucirá esta linda bota que hará verse muy elegante.',
-    price: 1.00,
+    price: 400.00,
     categorias: ['ninos'],
     properties: {
       piel: 'Piel',
@@ -418,7 +418,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/254cafe',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Luce estas lindas botas para esta temporada de invierno ya que viene forrada toda de peluche.',
-    price: 1.00,
+    price: 450.00,
     categorias: ['ninos','damas'],
     properties: {
       piel: 'Textil',
@@ -434,7 +434,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/270negro',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Con esta bota de peluche no sufrirás el frío de esta temporada ya que esta forrada de peluche, te harán verte muy bien con sus herrajes laterales.',
-    price: 1.00,
+    price: 450.00,
     categorias: ['ninos','damas'],
     properties: {
       piel: 'Textil',
@@ -450,7 +450,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/271miel',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Con estas botas tu niña se sentirá feliz ya que están forradas de peluche y la protegerán del frío de esta temporada.',
-    price: 1.00,
+    price: 400.00,
     categorias: ['ninos','damas'],
     properties: {
       piel: 'Textil',
@@ -466,7 +466,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/293miel',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Con ésta bota tu niña no tendrá frío ya que esta forrada de borrega, en esta temporada de invierno se sentirá muy cómoda y sus pies muy calientitos.',
-    price: 1.00,
+    price: 400.00,
     categorias: ['ninos','damas'],
     properties: {
       piel: 'Textil',
@@ -482,7 +482,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/295cafe',
     detail: ['1.jpg', '2.jpg', '3.jpg'],
     description: 'Tu princesa con este botín lucirá muy bien ya que lucirá la aplicación de borrego.',
-    price: 1.00,
+    price: 350.00,
     categorias: ['ninos','damas'],
     properties: {
       piel: 'Textil',
@@ -498,7 +498,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/614negro',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Con estás botas de piel tu nena lucirá hermosa, tiene detalles en hebillas en los costados. Lucirá muy bien al ponérsela con pantalones de mezclilla.',
-    price: 1.00,
+    price: 400.00,
     categorias: ['ninos'],
     properties: {
       piel: 'Piel',
@@ -514,7 +514,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/615negro',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Estás botas harán que luzcas muy bien ya que cuentan con un adorno de herrajes que harán que luzcas mucho mejor.',
-    price: 1.00,
+    price: 630.00,
     categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -530,7 +530,7 @@ export const PRODUCTOS: Productos[] = [
     album: '/assets/images/galerias/galeria-gian-carlo/616cafe',
     detail: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     description: 'Con este lindo botín lucirás perfecta ya que cuenta con tiras que rodean al tobillo y hebillas. Para lucir mejor con tus jeans.',
-    price: 1.00,
+    price: 450.00,
     categorias: ['damas'],
     properties: {
       piel: 'Textil',
