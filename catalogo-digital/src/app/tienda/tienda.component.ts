@@ -3,6 +3,7 @@ import {ZapateriaService} from '../zapateria.service';
 import {Zapateria} from '../zapateria';
 import {Zapato} from '../zapato';
 import {Globals} from '../globals';
+import { AngularFireStorage } from "@angular/fire/storage";
 
 @Component({
   selector: 'app-tienda',
@@ -14,7 +15,7 @@ export class TiendaComponent implements OnInit {
   productos: Zapato[];
   p: 1;
 
-  constructor(private zapateriaService: ZapateriaService, public globals: Globals) { }
+  constructor(private zapateriaService: ZapateriaService, public globals: Globals, private storage: AngularFireStorage) { }
 
   ngOnInit() {
     this.getProductores();
@@ -28,5 +29,11 @@ export class TiendaComponent implements OnInit {
 
   getAllProductos(): void{
     this.productos  = this.zapateriaService.getAllProductos();
+  }
+
+  getImageSource(path: string){
+    //return this.storage.ref(path).fullPath;
+
+    //return this.downloadURL = this.storage.ref(path).getDownloadURL();
   }
 }

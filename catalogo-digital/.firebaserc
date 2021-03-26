@@ -2,5 +2,14 @@
   "projects": {
     "catalogo": "catalogo-digital-d4887",
     "default": "catalogo-digital-d4887"
+  },
+  "targets": {
+    "catalogo-digital-d4887": {
+      "hosting": {
+        "catalogo-digital": [
+          "catalogo-digital-d4887"
+        ]
+      }
+    }
   }
 }

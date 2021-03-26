@@ -98,6 +98,10 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -124,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "catalogo-digital"
+  "defaultProject": "catalogo-digital",
+  "cli": {
+    "analytics": "fe4bdee6-f6e0-458c-97f3-cb5bd2e36949"
+  }
 }
