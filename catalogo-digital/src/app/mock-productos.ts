@@ -714,7 +714,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/betsy',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Este hermoso diseño exclusivo totalmente de piel te harán ver superó elegante y a la vanguardia esta temporada. Atrévete a disfrutar de nuestros exclusivos diseños.',
-      price: 650.00,
+      price: 750.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -730,7 +730,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/chanel',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Los botines de piel en esta temporada son primordiales para lucir a la moda y elegante. Siempre brindando calidad de excelencia y comodidad.',
-      price: 650.00,
+      price: 750.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -746,7 +746,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/livia',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Las botas cortas de piel son ideales para lucir cómoda y elegante brindando exclusividad en el diseño. Con cierres laterales y suela antiderrapante.',
-      price: 640.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -762,7 +762,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/matilda',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Las botas cortas totalmente de piel son básicas para esta temporada, brindando exclusividad en el diseño y comodidad a tus pies.',
-      price: 640.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -778,7 +778,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/melitza',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Estás botas totalmente de piel te harán ver super chic, elegante y cómoda.',
-      price: 580.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -794,7 +794,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/ozono',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Hermoso modelo con cordón ajustable con ojillos metálicos totalmente de piel que te hará lucir un look casual y disfrutar de la comodidad.',
-      price: 600.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -810,7 +810,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/renata',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Las botas de piel de esta temporada son ideales para estar a la vanguardia, con un diseño super cómodo y casual.',
-      price: 640.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -826,7 +826,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/rossy',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Impulsa tu desafiante personalidad con estas botas, un calzado que impone elegancia y poder. Este fascinante modelo tiene una suela resistente para andar casi en cualquier superficie. Su ajuste es por medio de agujetas y totalmente forrado de piel. Muévete libremente con estas botas. El complemento que necesitas para destacar en esta temporada.',
-      price: 700.00,
+      price: 750.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -842,7 +842,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/sofia',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Las botas cortas de piel de cuero son ideales para esta temporada. ¡Con un look super!',
-      price: 640.00,
+      price: 650.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -858,7 +858,7 @@ export const PRODUCTOS: Productos[] = [
       album: '/assets/images/galerias/galeria-jimmy/yadhira',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
       description: 'Disfruta de este botín totalmente de piel con diseño acordonado con un tacón super cómodo y suela antiderrapante que te hará lucir a la vanguardia de esta temporada.',
-      price: 580.00,
+      price: 700.00,
       categorias: ['damas'],
     properties: {
       piel: 'Piel',
@@ -925,7 +925,7 @@ export const PRODUCTOS: Productos[] = [
       modelo: 'Botín 610',
       album: '/assets/images/galerias/galeria-romers/610negro',
       detail: ['1.jpg', '2.jpg', '3.jpg'],
-      description: 'Botín hecho totalmente en piel confortable, cuenta con elásticos laterales y suela de base con altura de 7.5 cm., te brindará comodidad y elegancia en tu forma de caminar.',
+      description: 'Botín hecho totalmente en piel confortable, cuenta con elásticos laterales y suela de base con altura de 7.5 cm., te brindará comodidad y elegancia en tu forma de vestir.',
       price: 1.00,
       categorias: ['damas'],
     properties: {
