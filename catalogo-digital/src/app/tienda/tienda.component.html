@@ -3,8 +3,10 @@
     <li data-target="#carouselExampleIndicators" *ngFor="let productor of zapaterias; first as isFirst; index as i;" [class.active]="isFirst" data-slide-to="i"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let productor of zapaterias; first as isFirst" [class.active]="isFirst">
-      <img class="d-block w-100" data-src="{{globals.bucket}}/assets/images/imagenes-carrusel/carrusel-{{productor.url}}.jpg" alt="Second slide">
+    <div class="carousel-item" *ngFor="let productor of zapaterias; first as isFirst" [class.active]="isFirst" [ngStyle]="{'background-image': 'url('+globals.bucket+'/assets%2Fimages%2Fimagenes-carrusel%2Fcarrusel-'+productor.url+'.jpg?alt=media)'}">
+      <!--
+      <img class="d-block w-100" data-src="{{globals.bucket}}/assets%2Fimages%2Fimagenes-carrusel%2Fcarrusel-{{productor.url}}.jpg" alt="Second slide">
+    -->
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -18,17 +20,37 @@
 </div>
 <!--
 <app-productores></app-productores>
+
+<div class="jumbotron jumbotron-fluid bg-danger">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
 -->
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-12 my-3">
+      <h2 class="featurette-heading">Somos <span class="text-muted-hm">Zapateros</span></h2>
+      <h2 class="featurette-heading">Somos <span class="text-muted-hm">San Mateo Atenco</span></h2>
+      <p class="text-center pt-5">Somos un grupo de productores de calzado artesanal, dedicados desde hace más de 50 años a realizar zapatos con la mejor calidad, los mejores materiales y con mucha amor a nuestro trabajo.</p>
+      <p class="text-center">En muchas regiones de México se dedican a este hermoso oficio, pero este sitio es para decirle al mundo que en San Mateo Atenco también Somos Zapateros.</p>
+    </div>
+  </div>  
+</div>
+
+
 <main role="main">
   <div class="album py-5">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 box-shadow card-img">
             <a href="/categoria/damas" class="card-link">
-            <h2 class="card-header text-center no-border">Damas</h2>
+            <h2 class="card-header text-center">Damas</h2>
               <div class="view overlay hm-zoom">
-                <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-mujer.jpg" alt="Categoría Mujer">
+                <img class="card-img-top" data-src="{{globals.bucket}}/assets%2Fimages%2Fimagenes-categorias%2Fcuadro-mujer.jpg?alt=media" alt="Categoría Mujer">
               </div>
             </a>
           </div>
@@ -38,7 +60,7 @@
             <a href="/categoria/caballeros" class="card-link">
             <h2 class="card-header text-center">Caballeros</h2>
               <div class="view overlay hm-zoom">
-                <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-hombre.jpg" alt="Categoría Hombre">
+                <img class="card-img-top" data-src="{{globals.bucket}}/assets%2Fimages%2Fimagenes-categorias%2Fcuadro-hombre.jpg?alt=media" alt="Categoría Hombre">
               </div>
             </a>
           </div>
@@ -48,37 +70,45 @@
             <a href="/categoria/ninos" class="card-link">
             <h2 class="card-header text-center">Niñ@s</h2>
               <div class="view overlay hm-zoom">
-                <img class="card-img-top" data-src="{{globals.bucket}}/assets/images/imagenes-categorias/cuadro-ninos.jpg" alt="Categoría Niños">
+                <img class="card-img-top" data-src="{{globals.bucket}}/assets%2Fimages%2Fimagenes-categorias%2Fcuadro-ninos.jpg?alt=media" alt="Categoría Niños">
               </div>
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<main role="main">
+  <div class="bg-white py-5">
+    <div class="container-fluid">
+      <div class="row">
         <div class="col-md-12">
-          <hr>
-          <h2 class="text-center font-italic mb-3">#EligeTuEstilo</h2>
+          <h2 class="text-center mb-5"><strong>#</strong>EligeTuEstilo</h2>
         </div>
         <div class="col-md-4" *ngFor="let zapatoItem of productos | paginate: { itemsPerPage: 6, currentPage: p }">
-          <div class="card mb-4 box-shadow">
+          <div class="card mb-5 box-shadow">
             <a href="producto/{{zapatoItem.marca}}/{{zapatoItem.id}}">
-              <img class="card-img-top" data-src="{{globals.bucket+zapatoItem.album}}/1.jpg" alt="Card image cap">
+              <img class="card-img-top" data-src="{{globals.bucket+zapatoItem.album}}%2F1.jpg?alt=media" alt="{{zapatoItem.marca}}/{{zapatoItem.id}}">
             </a>
             <div class="card-body">
+              <!--
               <div class="d-flex justify-content-end">
-                <a class="badge badge-light" *ngFor="let categoria of zapatoItem.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
+                <a class="badge badge-hm" *ngFor="let categoria of zapatoItem.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
               </div>
-              <p class="card-text">{{zapatoItem.modelo}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="zapateria/{{zapatoItem.marca}}" class="badge badge-secondary">Ir a la zapatería</a>
-                </div>
-                <small class="text-muted">{{zapatoItem.price | currency}}</small>
-              </div>
+              -->
+              <p class="card-text my-0">{{zapatoItem.modelo}} <small class="text-muted">{{zapatoItem.price | currency}}</small></p>
+              
+              <a href="zapateria/{{zapatoItem.marca}}" class="badge badge-light">Ver más</a>
+
             </div>
           </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="col-md-12 mt-3 d-flex justify-content-center">
           <pagination-controls
             (pageChange)="p = $event"
             previousLabel="Anterior"
@@ -88,16 +118,21 @@
           </pagination-controls>
         </div>
       </div>
+    </div>
+  </div>
+</main>
 
+<main role="main">
+  <div class="album py-5">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <hr>
-          <h2 class="text-center font-italic mb-3">#ZapateroATusZapatos</h2>
+          <h2 class="text-center mb-5"><strong>#</strong>ZapateroATusZapatos</h2>
         </div>
-        <div class="col-md-4 py-3" *ngFor="let productor of zapaterias; first as isFirst">
+        <div class="col-md-4 py-4 px-4" *ngFor="let productor of zapaterias; first as isFirst">
           <a href="/zapateria/{{productor.url}}">
           <div class="view overlay hm-zoom">
-            <img data-src="{{globals.bucket}}/assets/images/logos/{{productor.url}}.png" class="img-fluid " alt="{{productor.url}}">
+            <img data-src="{{globals.bucket}}/assets%2Fimages%2Flogos%2F{{productor.url}}.png?alt=media" class="img-fluid " alt="{{productor.url}}">
           </div>
           </a>
         </div>

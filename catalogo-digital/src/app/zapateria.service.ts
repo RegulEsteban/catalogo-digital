@@ -6,7 +6,6 @@ import { ZAPATERIAS } from './mock-zapaterias';
 import { Productos } from './productos';
 import { PRODUCTOS } from './mock-productos';
 import {Zapato} from './zapato';
-import {forEach} from '@angular/router/src/utils/collection';
 
 @Injectable({
   providedIn: 'root'

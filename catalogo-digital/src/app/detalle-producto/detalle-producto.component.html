@@ -1,9 +1,8 @@
 <div *ngIf="shoe">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-5 order-2 pt-5">
+      <div class="col-md-5 order-md-2 pt-5">
         <h2 class="featurette-heading"><span class="text-muted">Modelo:</span> {{ shoe.modelo | uppercase }}</h2>
-        <a class="badge badge-light" *ngFor="let categoria of shoe.categorias" href="/categoria/{{categoria}}"> #{{categoria}} </a>
         <hr>
         <h4>{{shoe.price | currency}} *</h4>
         <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
@@ -11,55 +10,40 @@
           <tbody>
           <tr class="text-center">
             <td>
-              <img src="/assets/images/iconos/piel.png" width="30" height="30" class="d-inline-block align-top" alt="piel"><br>
+              <img src="{{globals.bucket}}/assets%2Fimages%2Ficonos%2Fpiel.png?alt=media" width="30" height="30" class="d-inline-block align-top" alt="piel"><br>
               {{shoe.properties.piel}}
             </td>
             <td>
-              <img src="/assets/images/iconos/corte.png" width="30" height="30" class="d-inline-block align-top" alt="corte"><br>
+              <img src="{{globals.bucket}}/assets%2Fimages%2Ficonos%2Fcorte.png?alt=media" width="30" height="30" class="d-inline-block align-top" alt="corte"><br>
               {{shoe.properties.forro}}
             </td>
             <td>
-              <img src="/assets/images/iconos/suela.png" width="30" height="30" class="d-inline-block align-top" alt="suela"><br>
+              <img src="{{globals.bucket}}/assets%2Fimages%2Ficonos%2Fsuela.png?alt=media" width="30" height="30" class="d-inline-block align-top" alt="suela"><br>
               {{shoe.properties.suela}}
             </td>
           </tr>
           </tbody>
         </table>
         <h4>Tallas <small class="text-muted text-right">MX</small></h4>
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <td *ngFor="let size of shoe.properties.tallas">{{size}}</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr>
-        <h4>Colores</h4>
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <tbody>
-            <tr>
-              <td *ngFor="let color of shoe.colores">{{color}}</td>
-            </tr>
-            </tbody>
-          </table>
+        <button type="button" class="btn btn-lg btn-outline-dark mx-1 my-1" *ngFor="let talla of shoe.properties.tallas">{{talla}}</button>
+        <div *ngIf="shoe.online" class="mt-md-4">
+          <a [href]="shoe.online" class="btn btn-dark btn-lg btn-block mx-1 my-1">Comprar</a>
         </div>
         <hr>
         <div class="container text-right">
-          <div class="btn-group" role="group" aria-label="Redes Sociales">
+          <div class="btn-group" role="group" aria-label="Basic example">
             <a href="https://www.facebook.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/dolancy/" target="_blank" class="btn btn-light"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
+          <p><b>*</b> Precio en sucursal</p>
         </div>
 
       </div>
-      <div class="col-md-7 order-1">
+      <div class="col-md-7 order-md-1">
         <div id="carouselShoes" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div *ngFor="let view of shoe.detail; let idx = index" class="{{idx == 0 ? 'carousel-item active' : 'carousel-item'}}">
-              <img class="d-block w-100" data-src="{{globals.bucket+shoe.album}}/{{view}}" alt="{{shoe.modelo}}">
+              <img class="d-block w-100" src="{{globals.bucket + shoe.album}}%2F{{view}}?alt=media" alt="{{shoe.modelo}}">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselShoes" role="button" data-slide="prev">
@@ -72,43 +56,41 @@
           </a>
         </div>
       </div>
+      <div class="col-md-12 order-md-3 text-center">
+        <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
+        <hr>
+        <table class="table table-sm table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Talla<br/>Dolancy</th>
+              <th scope="col">Largo en <br/>centímetros</th>
+              <th scope="col">US</th>
+              <th scope="col">EUR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let talla of shoe.properties.tallas">
+              <th scope="row">{{talla}}</th>
+              <td>{{talla}}</td>
+              <td>{{talla-18.5}}</td>
+              <td>{{+talla+13.5}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid bg-light">
   <div class="row px-2">
     <div class="col-md-12">
-      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/horizontal.jpg" alt="Card image">
+      <img class="card-img" src="{{globals.bucket + shoe.album}}%2Fhorizontal.jpg?alt=media" alt="Card image">
     </div>
     <div class="col-md-6">
-      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro1.jpg" alt="Card image">
+      <img class="card-img" src="{{globals.bucket + shoe.album}}%2Fcuadro1.jpg?alt=media" alt="Card image">
     </div>
     <div class="col-md-6">
-      <img class="card-img" data-src="{{globals.bucket+shoe.album}}/cuadro2.jpg" alt="Card image">
-    </div>
-
-    <div class="col-md-12 order-md-3 text-center">
-      <h2 class="featurette-heading"><span class="text-muted">Guía de </span>tallas</h2>
-      <hr>
-    </div>
-    <div class="col-md-6 order-md-4 text-center">
-      <table class="table">
-        <thead class="thead-light">
-        <tr>
-          <th scope="col">Talla</th>
-          <th scope="col">Largo</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let talla of shoe.properties.tallas">
-          <th scope="row">{{talla}}</th>
-          <td>{{talla}} cm</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-md-6 order-md-5 text-center">
-      <p class="lead text-justify detail-description text-custom-desc">{{shoe.description}}</p>
+      <img class="card-img" src="{{globals.bucket + shoe.album}}%2Fcuadro2.jpg?alt=media" alt="Card image">
     </div>
   </div>
 </div>

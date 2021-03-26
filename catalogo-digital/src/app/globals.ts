@@ -2,5 +2,5 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
-  bucket: string = 'https://s3.us-east-2.amazonaws.com/catalogo-digital';
+  bucket: string = 'https://firebasestorage.googleapis.com/v0/b/catalogo-digital-d4887.appspot.com/o';
 }

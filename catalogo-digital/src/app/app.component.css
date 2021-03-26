@@ -27,20 +27,19 @@
   max-width: 40rem;
 }
 
-footer {
+footer,
+footer a{
   padding-top: 3rem;
   padding-bottom: 3rem;
+  color: #c5b97d;
 }
 
 footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
-
-.card-1{
-
+.box-shadow { 
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
 }
 
 .card-img:before{
@@ -55,4 +54,24 @@ footer p {
 
 .no-border{
   border: initial;
+}
+
+header{
+  background: #EBEBEB;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link{
+  color: #c5b97d;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.navbar-brand{
+  font-size: 1.5rem;
+}
+
+footer{
+  background: #433e3d;
+  color: #e4dbc0;
 }

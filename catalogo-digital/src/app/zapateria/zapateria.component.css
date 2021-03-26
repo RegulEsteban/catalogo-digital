@@ -41,3 +41,15 @@
   max-width: 800px;
   max-height: 200px;
 }
+
+.card{
+  border-radius: 0;
+  border: 0px solid #c5b97d;
+  color: #bbb9b7;
+  font-size: 1.2rem;
+}
+
+.card:hover{
+  border: 1px solid #c5b97d;
+}
+
